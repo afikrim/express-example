@@ -9,9 +9,13 @@ const app = express()
 //   res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 // })
 
+// View engine
+app.set('views', path.resolve(__dirname, 'views'))
+app.set('view engine', 'jade')
+
 app.use(express.static(path.resolve(__dirname, 'public')))
 
-app.use('/api', indexRouter)
+app.use('/', indexRouter)
 
 const PORT = process.env.PORT || 5000
 

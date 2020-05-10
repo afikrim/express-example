@@ -1,0 +1,15 @@
+extends layouts
+
+block app
+  .row.justify-content-center.d-flex
+    .col-8
+      .card
+        .card-header Login
+        .card-body.px-5
+          form(action="" method="post")
+            .form-group
+              input#email(type="email" name="email" placeholder="Email").form-control
+            .form-group
+              input#password(type="password" name="password" placeholder="Password").form-control
+            .form-group
+              button(type="submit").btn.btn-dark.float-right Login
